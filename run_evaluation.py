@@ -1,5 +1,5 @@
 """"
-Date:2017.6.2
+Date:2017.4.27
 Neural Network design homework
 Using 3-layers-BP NN to classification and regression
 author:Suo Chuanzhe
