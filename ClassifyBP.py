@@ -49,6 +49,7 @@ def main():
 
     # tanh
     classifier.initialize_parameters(classifier.tanh_activation, classifier.tanh_gradient, classifier.tanh_activation, classifier.tanh_gradient)
+    loss = classifier.train(classifier.L2_loss, classifier.L2_loss_gradient, classifier.Adadelta_optimizer, 0.01, 100000, decay_rate=0.9)
 
     # ReLU
     # classifier.initialize_parameters(classifier.ReLU_activation, classifier.ReLU_gradient, classifier.ReLU_activation, classifier.ReLU_gradient)
@@ -83,7 +84,6 @@ def main():
     # Adadelta_optimizer
     # def Adadelta_optimizer(self, param, hyper_param={'decay_rate': 0.9}):
 
-    loss = classifier.train(classifier.L2_loss, classifier.L2_loss_gradient, classifier.Adadelta_optimizer, 0.01, 100000, decay_rate=0.9)
 
 
     # RMSProp

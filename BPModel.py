@@ -222,7 +222,6 @@ class BPModel():
         except:
             print('Momentum_optimizer have no "momentum_rate" hyper-parameter')
             return
-
         # Forward propagation
         hidden_output_, network_output_ = self._forward()
 
@@ -239,9 +238,7 @@ class BPModel():
         extended_delta = momentum_rate * extended_delta + learn_rate * extended_gradient
         param[0] = extended_delta
         extended_variables = extended_variables - extended_delta
-
         self.weight_1, self.bias_1, self.weight_2, self.bias_2 = self.split_weights(extended_variables)
-
         return loss_
 
     # Nesterov Accelerated Gradient(NAG)
